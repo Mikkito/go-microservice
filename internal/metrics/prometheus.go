@@ -13,7 +13,7 @@ var (
 		[]string{"method", "path", "status"},
 	)
 	RequestDuration = prometheus.NewHistogramVec(
-		prometheus.CounterOpts{
+		prometheus.HistogramOpts{
 			Name: "http_duration_seconds",
 			Help: "Request duration",
 		},
